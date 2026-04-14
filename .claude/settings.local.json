@@ -1,0 +1,22 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(pip install:*)",
+      "Bash(pytest tests/ --collect-only)",
+      "Bash(python -c \"import sys; sys.path.insert\\(0, '.'\\); from tests.conftest import *; print\\('conftest imports successfully'\\)\")",
+      "Bash(grep -E \"^d|^-.*py$\")",
+      "Bash(pytest tests/ --collect-only -v)",
+      "Bash(python -c \"import sys; print\\('sys.path before conftest:', sys.path[:3]\\)\")",
+      "Bash(python -m pytest tests/ --collect-only)",
+      "Bash(python -c \"import sys; import os; sys.path.insert\\(0, os.path.dirname\\(os.path.dirname\\(os.path.abspath\\('tests/conftest.py'\\)\\)\\)\\); print\\('Added to sys.path:', sys.path[0]\\); import app; print\\('Successfully imported app module'\\)\")",
+      "Bash(python -m pytest tests/conftest.py -v)",
+      "Bash(python -m pytest --version)",
+      "Bash(python -c \"import pytest; print\\('pytest location:', pytest.__file__\\)\")",
+      "Bash(python -m pytest tests/ --co -vv)",
+      "Bash(cat)",
+      "Bash(python -m pytest /tmp/test_import.py -v)",
+      "Bash(python -m pytest /Users/sunilmishra/Documents/WorkSpace/LangChain-Workspace/fine-tuning-langchain-chat/tests/test_import.py -v)",
+      "Bash(pytest tests/test_protocols.py -v)"
+    ]
+  }
+}
